@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ReverseHack.In </title>
+    <title>ReverseHack.In</title>
     <link>https://techmaniack.github.io/</link>
+    <description>Recent content on ReverseHack.In</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author></author>
-    <rights>(C) 2016</rights>
-    <updated>2016-07-12 22:06:43 &#43;0530 IST</updated>
-
+    <lastBuildDate>Tue, 12 Jul 2016 22:06:43 +0530</lastBuildDate>
+    <atom:link href="https://techmaniack.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Hello hugo!</title>
+      <link>https://techmaniack.github.io/post/Hello-hugo/</link>
+      <pubDate>Tue, 12 Jul 2016 22:06:43 +0530</pubDate>
       
-        <item>
-          <title>Hello hugo!</title>
-          <link>https://techmaniack.github.io/post/Hello-hugo/</link>
-          <pubDate>Tue, 12 Jul 2016 22:06:43 IST</pubDate>
-          <author></author>
-          <guid>https://techmaniack.github.io/post/Hello-hugo/</guid>
-          <description>&lt;p&gt;I have been wanting to start my blog again for a long time. Github Pages sounded a reliable option and moreover it is free!.&lt;/p&gt;
+      <guid>https://techmaniack.github.io/post/Hello-hugo/</guid>
+      <description>&lt;p&gt;I have been wanting to start my blog again for a long time. Github Pages sounded a reliable option and moreover it is free!.&lt;/p&gt;
 
 &lt;p&gt;Github pages allows you to host a website directly from your github repository. This means that you do not need to get into the hassles of setting up a server or deal with cloud services like heroku. Just push your code to github and the content gets served from Githubs servers.&lt;/p&gt;
 
@@ -92,9 +91,7 @@ After you have verified your work and are ready to make the content live, you ne
 
 &lt;p&gt;That is it! Go check your beautiful blog on &lt;strong&gt;username.github.io&lt;/strong&gt;&lt;/p&gt;
 </description>
-        </item>
-      
+    </item>
     
-
   </channel>
 </rss>
