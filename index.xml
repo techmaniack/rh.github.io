@@ -16,37 +16,81 @@
           <pubDate>Tue, 12 Jul 2016 22:06:43 IST</pubDate>
           <author></author>
           <guid>https://techmaniack.github.io/post/Hello-hugo/</guid>
-          <description>&lt;p&gt;I have been wanting to start my blog again for a long time. Github Pages sounded a reliable option and moreover it is free! The only problem being the URL which is &lt;a href=&#34;techmaniack.github.io&#34;&gt;username.github.io&lt;/a&gt; that looks not so good. I wanted to use &lt;a href=&#34;http://www.reversehack.in/&#34;&gt;my personal domain&lt;/a&gt;.&lt;br /&gt;
-Github pages allows you to host a website directly from your github repository. This means that you do not need to get into the hassles of setting up a server or deal with cloud services like heroku. Just push your code to github and the content gets served from Githubs servers.&lt;/p&gt;
+          <description>&lt;p&gt;I have been wanting to start my blog again for a long time. Github Pages sounded a reliable option and moreover it is free!.&lt;/p&gt;
 
-&lt;p&gt;Although your content gets served over https, bear in mind that Github Pages is not for anything serious. (Don&amp;rsquo;t plan to run a social network out of it. You will not be able to do it anyways). You do not get a database with Github Pages. For more information on the features and limitations of Github Pages head &lt;a href=&#34;https://help.github.com/articles/what-is-github-pages&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github pages allows you to host a website directly from your github repository. This means that you do not need to get into the hassles of setting up a server or deal with cloud services like heroku. Just push your code to github and the content gets served from Githubs servers.&lt;/p&gt;
 
-&lt;p&gt;Although Github prefers Jekyll to setup your blog, I am using Hugo. Hugo is a static web site generator written in Go. It is just a matter of choice. Personally for me, Hugo feels more minimal when it comes to development.&lt;/p&gt;
+&lt;p&gt;With the recent update your content gets served over https but bear in mind that Github Pages is not for anything serious. (Don&amp;rsquo;t plan to run a social network out of it. You will not be able to do it anyways). You do not get a database with Github Pages. For more information on the features and limitations of Github Pages head &lt;a href=&#34;https://help.github.com/articles/what-is-github-pages&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Github prefers Jekyll to setup your blog, I am using Hugo. Hugo is a static web site generator written in Go. It is just a matter of choice. I am also taking the liberty to simplify the deployment process, for a more cleaner git work flow head here.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Install Hugo on your local machine.&lt;/strong&gt;&lt;br /&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Install Hugo on your local machine.&lt;/strong&gt;&lt;br /&gt;
 Download and install the package for your operating system from &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;here&lt;/a&gt;.&lt;br /&gt;
-I am using Ubuntu 64 bit and if you are using the same then follow these commands&lt;br /&gt;
-&lt;code&gt;shell
-$ wget URL
-$ sudo dpkg -i PKG.deb
-&lt;/code&gt;
+I am using Ubuntu 64 bit and if you are using the same then follow these commands:&lt;br /&gt;
+&lt;code&gt;$ wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16-1_amd64.deb&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ sudo dpkg -i hugo_0.16-1_amd64.deb&lt;/code&gt;&lt;br /&gt;
 That&amp;rsquo;s it you are good to go. Check your hugo installation with hugo help&lt;br /&gt;
-&lt;code&gt;$ hugo help&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Setting up your hugo project.&lt;/strong&gt;&lt;br /&gt;
-Create a hugo project inside your github pages repository. If you haven&amp;rsquo;t created one, go ahead and do it now.&lt;br /&gt;
-&lt;code&gt;$ cd path/to/username.github.io&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;$ hugo new site --force .&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Writing your first post.&lt;/strong&gt;&lt;br /&gt;
-You would now want to write a post. Go ahead and do it as folllows&lt;br /&gt;
+&lt;code&gt;$ hugo help&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Setting up your hugo project.&lt;/strong&gt;&lt;br /&gt;
+Setup a new hugo project with the command:&lt;br /&gt;
+&lt;code&gt;$hugo new site blog&lt;/code&gt;&lt;br /&gt;
+This will create a new directory named &lt;code&gt;blog/&lt;/code&gt; with the boiler plate hugo code.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Writing your first post.&lt;/strong&gt;&lt;br /&gt;
+You would now want to write a post. Go ahead and do it as follows&lt;br /&gt;
+&lt;code&gt;$ cd blog/&lt;/code&gt;&lt;br /&gt;
 &lt;code&gt;$ hugo new post/hello-world.md&lt;/code&gt;&lt;br /&gt;
-This will create the file &lt;em&gt;content/post/hello-world.md&lt;/em&gt; with the content&lt;br /&gt;
-FILE_CONTENT&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Test your Blog before making it live.&lt;/strong&gt;&lt;br /&gt;
-Hugo has an in-built http server that runs on your local machine. This will help you review the content locally before making it live.&lt;/li&gt;
+This will create the file &lt;code&gt;content/post/hello-world.md&lt;/code&gt; inside the &lt;code&gt;blog/content/post/&lt;/code&gt; directory. Open this file in the editor of your choice and start writing&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;   +++
+   date = &amp;quot;2016-07-12T22:06:43+05:30&amp;quot;
+   draft = false
+   title = &amp;quot;Hello world&amp;quot;
+       
+   +++
+
+    Start writing here...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure you set &lt;strong&gt;draft&lt;/strong&gt; = &lt;strong&gt;false&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Test your blog before making it live.&lt;/strong&gt;&lt;br /&gt;
+Hugo has an in-built http server that runs on your local machine. This will help you review the content locally before making it live.&lt;br /&gt;
+&lt;code&gt;$ hugo server&lt;/code&gt;&lt;br /&gt;
+Open you browser and visit &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;&lt;br /&gt;
+You will see a blank page. This is normal as Hugo needs a theme to render content.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Setting up theme&lt;/strong&gt;&lt;br /&gt;
+Hugo has a variety of themes which you can browse online at &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;Hugo Themes&lt;/a&gt;. For tutorial purpose we will use hugo_theme_robust.&lt;br /&gt;
+&lt;code&gt;$ mkdir themes&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ cd themes&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ git clone https://github.com/dim0627/hugo_theme_robust.git&lt;/code&gt;&lt;br /&gt;
+You might want to remove the &lt;em&gt;.git&lt;/em&gt; from the theme to avoid conflict with your git repo.&lt;br /&gt;
+&lt;code&gt;$ rm hugo_theme_robust/.git&lt;/code&gt;&lt;br /&gt;
+Finally add the theme name to hugo config (&lt;strong&gt;config.toml&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;   baseurl=&amp;quot;https://username.github.io/&amp;quot;
+   languageCode=&amp;quot;en-us&amp;quot;
+   title=&amp;quot;My Blog&amp;quot;
+   theme=&amp;quot;hugo_theme_robust&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Test your blog before you make it live.&lt;/strong&gt;&lt;br /&gt;
+Follow step 4&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Push your blog to Github&lt;/strong&gt;&lt;br /&gt;
+After you have verified your work and are ready to make the content live, you need to build your website locally and push it to github. Hugo website is built by running &lt;code&gt;$ hugo&lt;/code&gt; commmand without arguements. If this command is succesful you will see a &lt;code&gt;public/&lt;/code&gt; directory created inside your project. We need to push the contents of this directory to our github pages repo.&lt;br /&gt;
+&lt;code&gt;$ cd public&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ git init&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ git add .&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ git commit -m &amp;quot;Initial commit!&amp;quot;&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ git remote add origin git@github.com:techmaniack/techmaniack.github.io.git&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ git push origin master&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Finally getting back to my blog. Feels good.&lt;/p&gt;
+&lt;p&gt;That is it! Go check your beautiful blog on &lt;strong&gt;username.github.io&lt;/strong&gt;&lt;/p&gt;
 </description>
         </item>
       
