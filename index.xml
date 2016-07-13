@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ReverseHack.In </title>
+    <link>https://techmaniack.github.io/</link>
+    <language>en-us</language>
+    <author></author>
+    <rights>(C) 2016</rights>
+    <updated>2016-07-12 22:06:43 &#43;0530 IST</updated>
+
+    
+      
+        <item>
+          <title>Hello hugo!</title>
+          <link>https://techmaniack.github.io/post/Hello-hugo/</link>
+          <pubDate>Tue, 12 Jul 2016 22:06:43 IST</pubDate>
+          <author></author>
+          <guid>https://techmaniack.github.io/post/Hello-hugo/</guid>
+          <description>&lt;p&gt;I have been wanting to start my blog again for a long time. Github Pages sounded a reliable option and moreover it is free! The only problem being the URL which is &lt;a href=&#34;techmaniack.github.io&#34;&gt;username.github.io&lt;/a&gt; that looks not so good. I wanted to use &lt;a href=&#34;http://www.reversehack.in/&#34;&gt;my personal domain&lt;/a&gt;.&lt;br /&gt;
+Github pages allows you to host a website directly from your github repository. This means that you do not need to get into the hassles of setting up a server or deal with cloud services like heroku. Just push your code to github and the content gets served from Githubs servers.&lt;/p&gt;
+
+&lt;p&gt;Although your content gets served over https, bear in mind that Github Pages is not for anything serious. (Don&amp;rsquo;t plan to run a social network out of it. You will not be able to do it anyways). You do not get a database with Github Pages. For more information on the features and limitations of Github Pages head &lt;a href=&#34;https://help.github.com/articles/what-is-github-pages&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Although Github prefers Jekyll to setup your blog, I am using Hugo. Hugo is a static web site generator written in Go. It is just a matter of choice. Personally for me, Hugo feels more minimal when it comes to development.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Install Hugo on your local machine.&lt;/strong&gt;&lt;br /&gt;
+Download and install the package for your operating system from &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;here&lt;/a&gt;.&lt;br /&gt;
+I am using Ubuntu 64 bit and if you are using the same then follow these commands&lt;br /&gt;
+&lt;code&gt;shell
+$ wget URL
+$ sudo dpkg -i PKG.deb
+&lt;/code&gt;
+That&amp;rsquo;s it you are good to go. Check your hugo installation with hugo help&lt;br /&gt;
+&lt;code&gt;$ hugo help&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Setting up your hugo project.&lt;/strong&gt;&lt;br /&gt;
+Create a hugo project inside your github pages repository. If you haven&amp;rsquo;t created one, go ahead and do it now.&lt;br /&gt;
+&lt;code&gt;$ cd path/to/username.github.io&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;$ hugo new site --force .&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Writing your first post.&lt;/strong&gt;&lt;br /&gt;
+You would now want to write a post. Go ahead and do it as folllows&lt;br /&gt;
+&lt;code&gt;$ hugo new post/hello-world.md&lt;/code&gt;&lt;br /&gt;
+This will create the file &lt;em&gt;content/post/hello-world.md&lt;/em&gt; with the content&lt;br /&gt;
+FILE_CONTENT&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Test your Blog before making it live.&lt;/strong&gt;&lt;br /&gt;
+Hugo has an in-built http server that runs on your local machine. This will help you review the content locally before making it live.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Finally getting back to my blog. Feels good.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+
+  </channel>
+</rss>
